@@ -1,0 +1,264 @@
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Light.otf?v=1739296515501') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Regular.otf?v=1739296560122') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Medium.otf?v=1739296542516') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Semibold.otf?v=1739296570227') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Bold.otf?v=1739296472538') format('opentype');
+  font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://cdn.glitch.global/b5b72ff1-8979-4b5e-851a-e04a19049084/Screenshot%202025-03-02%20at%203.08.45%20PM.png?v=1740928185097') no-repeat center center fixed;
+    background-size: cover;
+    color: yellow;
+    font-family: 'SF Pro Display', sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+    body, a {
+        cursor: none;
+    }
+
+/* NAV GRADIENT */
+.nav-gradient {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.nav-gradient.top {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 0.15) 75%, rgba(242, 242, 242, 0) 100%);
+}
+
+.nav-gradient.bottom {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 0.15) 75%, rgba(242, 242, 242, 0) 100%);
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.corner {
+    position: fixed;
+    font-size: 1.5rem;
+    pointer-events: auto;
+}
+
+.top-left { top: 20px; left: 20px; }
+.top-right { top: 20px; right: 20px; }
+.bottom-left { bottom: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }
+
+a {
+    text-decoration: underline;
+    color: blue;
+}
+
+a:hover {
+    color: yellow;
+     text-decoration: none;
+}
+
+
+#custom-cursor {
+    position: fixed;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    background: transparent;
+    color: rgb(0, 0, 255);
+    font-size: 50px;
+    pointer-events: none; /* Ensure the custom cursor doesn't interfere with interactions */
+    z-index: 1000;
+    transform: translate(-50%, -50%); /* Center the custom cursor */
+}
+
+#custom-cursor.emoji {
+    width: 35px; /* Slightly smaller size for emoji cursors */
+    height: 35px;
+    font-size: 35px;
+    transform: translate(-50%, -50%); /* Center the custom cursor */
+}
+
+
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90vw;
+    margin-top: 8vw;
+    margin-left: 8vw;
+}
+
+.video-container {
+    position: relative;
+    width: 65%;
+    margin-bottom: 1vw; /* Reduced space between video and image */
+    border-radius: 1.1vw; /* Ensures rounded corners */
+    overflow: hidden; /* Clips inner content */
+    margin-right: 8vw;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1.1vw; /* Ensures rounded corners */
+}
+
+.unmute-text {
+    margin-top: .5vw; /* Add margin-top to separate from the video */
+    text-align: right; /* Center align */
+    font-size: 1vw; /* Smaller size */
+    color: white;
+}
+
+
+.project-text {
+    width: 45%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
+}
+
+
+.project-label {
+    font-size: 1.1vw; /* Same size as subtitle */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0vw; /* Less space between "project title" and "Wayfarer" */
+}
+
+
+.project-title {
+    font-size: 5vw;
+    font-weight: normal; /* Normal weight */
+    max-width: 90vw;
+    margin-bottom: 1vw; /* Reduced margin */
+}
+
+
+.project-categories {
+    display: flex;
+    gap: 0.6vw; /* Adjust gap dynamically */
+    margin-top: 1vw;
+    margin-bottom: 1vw; /* Reduced margin */
+}
+
+.category {
+    font-size: clamp(0.6vw, 1vw, 1.2vw); /* Responsive font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0.15vw solid white; /* Scales with width */
+    padding: 0.4vw 0.8vw; /* Responsive padding */
+    border-radius: 1.5vw; /* Scales with size */
+}
+
+.project-description {
+    max-width: 30vw;
+    font-size: 1.6vw;
+    line-height: 2vw;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2vw; /* Reduced margin */
+}
+
+.image-container {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    padding: 2vw;
+    gap: 2vw; /* Increased space between image and text */
+    margin: 0 auto;
+}
+
+.cave-clock-image {
+    width: 56%; /* Increase the size */
+    border-radius: 1.5vw; /* Slightly reduce the border-radius */
+    margin-right: 3vw; /* Move it left to align */
+    margin-bottom: 4vw; /* Increased space below the image */
+}
+
+.placeholder-text {
+    width: 42%;
+    font-size: 1.5vw;
+    color: white;
+    line-height: 2vw;
+    margin-left: 1.2vw;
+}
+
+.project-subtitle {
+    font-size: 1.1vw;
+    margin-bottom: 2vw; /* Increased spacing */
+    line-height: 1.2vw;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2vw;
+    margin-bottom: 2vw; /* Adds space below */
+    padding: 0.5vw 1vw;
+    font-size: 1.2vw;
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 0.15vw solid yellow;
+    border-radius: 1.5vw;
+    text-decoration: none;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+    .project-content {
+margin-top: 50%;
+  }
+  .image-container{
+margin-bottom: 50%;
+  }}

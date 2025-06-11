@@ -1,0 +1,648 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Regular.otf?v=1739296560122') format('opentype');
+}
+
+:root {
+    --vh: 1vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.instructions, .instructions2, .scroll-container text {
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 1);
+}
+
+body {
+    position: relative;
+    background: none;
+    color: rgb(0, 0, 255);
+    font-family: 'SF Pro Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    cursor: none;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.glitch.global/ae660dc2-9a03-4c73-be32-ae6f289c8253/bg%20portfolio%20website.png?v=1741820904330') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to top, white, transparent);
+    z-index: 0;
+}
+
+a, .gallery-item, .instructions, .instructions2 {
+    cursor: none;
+}
+
+.intro-text {
+    position: fixed;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 130);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: calc(var(--vh, 1vh) * -15.8);
+    left: 0.5vw;
+    transform: translateZ(0);
+    padding-bottom: 2vw;
+}
+
+.more-info {
+    position: fixed;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 130);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: calc(var(--vh, 1vh) * -12);
+    left: 1.5vw;
+    transform: translateZ(0);
+    padding-top: 2vw;
+}
+
+.intro-text svg, .more-info svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    display: block;
+}
+
+.intro-text text, .more-info text {
+    font-size: clamp(16px, 2.5vw, 24px);
+    visibility: visible;
+}
+
+.name-highlight {
+    fill: white;
+    font-family: 'SF Pro Display', sans-serif;
+    paint-order: stroke fill;
+    stroke: rgb(0, 0, 255);
+    stroke-width: .3vw;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.intro-text svg, .scroll-container svg, .more-info svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: visible;
+}
+
+.scroll-container svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: visible;
+    preserveAspectRatio: "xMidYMid meet";
+}
+
+.intro-text text, .scroll-container text, .more-info text {
+    fill: rgb(0, 0, 255);
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.intro-text, .more-info {
+    transform: none;
+}
+
+.instructions {
+    position: fixed;
+    bottom: 1vh;
+    left: 1vh;
+    color: rgb(0, 0, 255);
+    opacity: 0.9;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: clamp(10px, 1.2vw, 14px);
+    text-align: left;
+    line-height: 1.1;
+    font-weight: 500;
+    z-index: 4;
+    padding: 15px;
+}
+
+.instructions .coded-by {
+    display: block;
+    margin-top: 3.5px;
+    font-size: clamp(10px, 1.2vw, 14px);
+}
+
+.instructions2 {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vh;
+    color: rgb(0, 0, 255);
+    opacity: 0.9;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: clamp(10px, 1.2vw, 14px);
+    text-align: right;
+    line-height: 1.1;
+    font-weight: 500;
+    z-index: 4;
+    padding: 15px;
+}
+
+a {
+    text-decoration: underline;
+    color: rgb(0, 0, 255);
+}
+
+a:hover {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+}
+
+.more-info a {
+    pointer-events: auto;
+}
+
+.instructions2 a {
+    color: rgb(0, 0, 255);
+    text-decoration: underline;
+}
+
+.instructions2 a:hover {
+    text-decoration: none;
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 200px;
+}
+
+.gallery-item {
+    position: absolute;
+    pointer-events: all;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 15vw;
+    height: 10vw;
+    z-index: 2;
+    transform-origin: center center;
+    transition: transform 0.4s ease-in-out, z-index 0s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.2);
+    z-index: 5;
+}
+
+.gallery-item video,
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item .float-transform {
+    transform: translate3d(0, 0, 0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: normal;
+    transform: scale(0.833);
+}
+
+.gallery-item:hover .overlay-content {
+    transform: scale(0.833); 
+}
+
+.project-title {
+    font-size: 1.2vw;
+    font-family: 'SF Pro Display', sans-serif;
+    margin-bottom: 0.8vw;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.category {
+    font-size: 0.7vw;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 0.3vw 0.6vw;
+    border-radius: 1vw;
+}
+
+.scroll-container {
+    overflow: hidden;
+    height: calc(var(--vh, 1vh) * 130);
+    width: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-container text {
+    font-size: 5vh;
+    dominant-baseline: middle;
+}
+
+#custom-cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: rgb(0, 0, 255);
+    font-size: 50px;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+
+#custom-cursor.emoji {
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes float {
+    0% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-12px, 8px, 0); }  
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes float2 {
+    0% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(12px, -8px, 0); }  
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes float3 {
+    0% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-8px, -12px, 0); }  
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+.float-1 {
+    animation: float 5s infinite ease-in-out;
+}
+
+.float-2 {
+    animation: float2 8s infinite ease-in-out reverse;
+}
+
+.float-3 {
+    animation: float3 6s infinite ease-in-out;
+}
+
+@media (max-width: 1920px) {
+   
+    #wayfarer {
+        right: 50vw;
+        top: 8vh;
+    }
+    #caveclock {
+        right: 35vw;
+        top: 43vh;
+    }
+    #onthegroove {
+        right: 28vw;
+        top: 12vh;
+    }
+    #sharpcheddar {
+        left: 5vw;
+        top: 28vh;
+    }
+    #theritual {
+        right: 18vw;
+        top: 35vh;
+    }
+    #goodnotes {
+        left: 21vw;
+        bottom: 33vh;
+    }
+    #thirstyrobots {
+        left: 33vw;
+        bottom: 8vh;
+    }
+    #publication {
+        left: 3vw;
+        bottom: 15vh;
+    }
+    #misc {
+        right: 8vw;
+        top: 5vh;
+    }
+}
+
+@media (max-width: 1440px) {
+    #wayfarer {
+        left: 3vw;
+        top: 28vh;
+    }
+    #caveclock {
+        left: 33vw;
+        top: 8vh;
+    }
+    #onthegroove {
+        left: 45vw;
+        top: 31vh;
+    }
+    #sharpcheddar {
+        left: 65vw;
+        top: 38vh;
+    }
+    #theritual {
+        right: 23vw;
+        top: 15vh;
+    }
+    #goodnotes {
+        left: 15vw;
+        top: 50vh;
+    }
+    #thirstyrobots {
+        left: 30vw;
+        bottom: 12vh;
+    }
+    #publication {
+        left: 3vw;
+        bottom: 12vh;
+    }
+    #misc {
+        right: 3vw;
+        top: 7vh;
+    }
+}
+
+@media (max-width: 1240px) {
+    #wayfarer {
+        left: 5vw;
+        top: 35vh;
+    }
+    #caveclock {
+        left: 33vw;
+        top: 8vh;
+    }
+    #onthegroove {
+        left: 45vw;
+        top: 31vh;
+    }
+    #sharpcheddar {
+        right: 16vw;
+        top: 40vh;
+    }
+    #theritual {
+        right: 23vw;
+        top: 15vh;
+    }
+    #goodnotes {
+        left: 15vw;
+        top: 55vh;
+    }
+    #thirstyrobots {
+        left: 30vw;
+        bottom: 12vh;
+    }
+    #publication {
+        left: 3vw;
+        bottom: 12vh;
+    }
+    #misc {
+        right: 3vw;
+        top: 7vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    #wayfarer {
+        left: 50vw;
+        top: 25vh;
+    }
+    #caveclock {
+        left: 31vw;
+        top: 12vh;
+    }
+    #onthegroove {
+        left: 58vw;
+        top: 8vh;
+    }
+    #sharpcheddar {
+        left: 6vw;
+        top: 35vh;
+    }
+    #theritual {
+        right: 25vw;
+        top: 48vh;
+    }
+    #goodnotes {
+        left: 6vw;
+        top: 70vh;
+  }
+    #thirstyrobots {
+        left: 23vw;
+        bottom: 35vh;
+    }
+    #publication {
+        left: 30vw;
+        bottom: 8vh;
+    }
+    #misc {
+        right: 7vw;
+        top: 17vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-text {
+        top: calc(var(--vh, 1vh) * -15); 
+    }
+
+    .more-info {
+        top: calc(var(--vh, 1vh) * -12); 
+    }
+    
+    .scroll-container {
+        height: calc(var(--vh, 1vh) * 130);
+      font-size: 18vw;
+    }
+
+    .gallery-item {
+        width: 15vw;
+        height: 10vw;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.2); 
+    }
+    
+    .intro-text text, .more-info text {
+        font-size: clamp(28px, 4vw, 32px); 
+    }
+
+    .scroll-container text {
+        font-size: 6vh;
+    }
+
+  
+    #wayfarer {
+        left: 4vw;
+        top: 12vh;
+    }
+    #caveclock {
+        left: 30vw;
+        top: 8vh;
+    }
+    #onthegroove {
+        left: 45vw;
+        top: 28vh;
+    }
+    #sharpcheddar {
+        left: 64vw;
+        top: 12vh;
+    }
+    #theritual {
+        right: 14vw;
+        top: 30vh;
+    }
+    #goodnotes {
+        left: 20vw;
+        top: 53vh;
+    }
+    #thirstyrobots {
+        left: 36vw;
+        bottom: 10vh;
+    }
+    #publication {
+        left: 3vw;
+        bottom: 18vh;
+    }
+    #misc {
+        right: 25vw;
+        top: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text {
+        top: calc(var(--vh, 1vh) * -21.5);
+    }
+
+    .more-info {
+        top: calc(var(--vh, 1vh) * -19.3);
+    }
+
+    .gallery-item {
+        width: 21vw;
+        height: 16vw;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.2);
+    }
+
+    .intro-text text, .more-info text {
+        font-size: clamp(32px, 5vw, 36px); 
+    }
+
+    .scroll-container text {
+        font-size: 7vh;
+    }
+
+ 
+    #wayfarer {
+        left: 8vw;
+        top: 5vh;
+    }
+    #caveclock {
+        left: 18vw;
+        top: 20vh;
+    }
+    #onthegroove {
+        left: 50vw;
+        top: 12vh;
+    }
+    #sharpcheddar {
+        left: 53vw;
+        top: 35vh;
+    }
+    #theritual {
+        right:8vw;
+        top: 20vh;
+    }
+    #goodnotes {
+        left: 8vw;
+        top: 45vh;
+    }
+    #thirstyrobots {
+        left: 18vw;
+        bottom: 25vh;
+    }
+    #publication {
+        left: 43vw;
+        bottom: 30vh;
+    }
+    #misc {
+        left: 72vw;
+        top: 66vh;
+    }
+}

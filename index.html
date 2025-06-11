@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <title>Anaya's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="https://cdn.glitch.global/d9e3876a-64dc-4a54-975f-de792dc80655/star%20logo%20png.png?v=1741092532454">
+</head>
+
+<body>
+    <div class="intro-text">
+        <svg id="intro-svg" viewBox="0 0 1200 800" width="1200" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <defs>
+                <path id="intro-curve" d="M0 184L50 176.3C100 168.7 200 153.3 300 217.3C400 281.3 500 424.7 600 504.3C700 584 800 600 900 532C1000 464 1100 312 1150 236L1200 160" fill="none" stroke="none" />
+            </defs>
+            <text font-family="SF Pro Display" font-size="20">
+                <textPath href="#intro-curve" startOffset="2%">
+                    Hi! I'm
+                    <tspan class="name-highlight">Anaya</tspan>
+                    and I'm a...
+                </textPath>
+            </text>
+        </svg>
+    </div>
+
+    <div class="scroll-container">
+        <svg viewBox="0 0 1200 800" width="1200" height="800">
+            <defs>
+                <path id="main-curve" fill="transparent" d="M0 204 C100 188.7 200 173.3 300 237.3 C400 301.3 500 444.7 600 524.3 C700 604 800 620 900 552 C1000 484 1100 332 1200 256" />
+            </defs>
+            <use href="#main-curve" stroke="none" />
+            <text font-family="SF Pro Display" fill="rgb(0, 102, 255)" font-size="30px">
+                <textPath id="text-path" href="#main-curve" startOffset="0%" dominant-baseline="middle" spacing="auto">
+                    GRAPHIC DESIGNER ✷ CREATIVE CODER ✷ PROBLEM SOLVER ✷ MUSIC CREATOR ✷ VISUAL ARTIST ✷ FILMMAKING
+                    ENTHUSIAST ✷ VIDEO GAME LOVER ✷ MULTIDISCIPLINARY ARTIST ✷
+                </textPath>
+            </text>
+        </svg>
+    </div>
+
+<!--     <div class="more-info">
+        <svg id="more-info-svg" viewBox="0 0 1200 800" width="1200" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <defs>
+                <path id="info-curve" d="M0 224L50 216.3C100 208.7 200 193.3 300 257.3C400 321.3 500 464.7 600 544.3C700 624 800 640 900 572C1000 504 1100 352 1150 276L1200 200" fill="none" stroke="none" />
+            </defs>
+            <text font-family="SF Pro Display" font-size="20">
+                <textPath href="#info-curve" startOffset="60%">more info about me <a href="about.html">here!</a></textPath>
+            </text>
+        </svg>
+    </div> -->
+
+    <div class="gallery">
+        <a href="wayfarer.html" id="wayfarer" class="gallery-item small">
+            <video src="https://cdn.glitch.global/4f8ad5f1-9be9-4d42-b78c-65d13c005756/wayfarer%20highlight%20reel.mp4?v=1740521270382" autoplay loop muted playsinline disablePictureInPicture preload="auto" controlsList="nodownload nofullscreen noremoteplayback" poster="">
+            </video>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p class="project-title">Wayfarer</p>
+                    <div class="categories">
+                        <span class="category">3D MODELLING + ANIMATION</span>
+                        <span class="category">BRANDING + MARKETING DESIGN</span>
+                        <span class="category">MOTION GRAPHICS</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="caveclock.html" id="caveclock" class="gallery-item small">
+            <video src="https://cdn.glitch.global/4f8ad5f1-9be9-4d42-b78c-65d13c005756/cave%20clock%20updated%20screen%20recording.mov?v=1740521321004" autoplay loop muted playsinline disablePictureInPicture preload="auto" controlsList="nodownload nofullscreen noremoteplayback" poster="">
+            </video>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p class="project-title">Cave Clock</p>
+                    <div class="categories">
+                        <span class="category">CREATIVE CODE</span>
+                        <span class="category">WEB DESIGN</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="onthegroove.html" id="onthegroove" class="gallery-item small">
+            <img src="https://cdn.glitch.global/4f8ad5f1-9be9-4d42-b78c-65d13c005756/otg%20portfolio%20thumbnail.png?v=1740521688848" alt="On The Groove">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p class="project-title">On The Groove</p>
+                    <div class="categories">
+                        <span class="category">BRANDING + MARKETING DESIGN</span>
+                        <span class="category">WEB DESIGN</span>
+                        <span class="category">CREATIVE CODE</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="sharpcheddar.html" id="sharpcheddar" class="gallery-item small">
+            <video src="https://cdn.glitch.global/4f8ad5f1-9be9-4d42-b78c-65d13c005756/sharpcheddar%20reel%201080p.mp4?v=1740521486050" autoplay loop muted playsinline disablePictureInPicture preload="auto" controlsList="nodownload nofullscreen noremoteplayback" poster="">
+            </video>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p class="project-title">Sharp Cheddar (Say Cheese!)</p>
+                    <div class="categories">
+                        <span class="category">TYPOGRAPHY</span>
+                        <span class="category">ANIMATION</span>
+                        <span class="category">TYPE DESIGN</span>
+                        <span class="category">MOTION DESIGN</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="theritual.html" id="theritual" class="gallery-item small">
+            <video src="https://cdn.glitch.global/4f8ad5f1-9be9-4d42-b78c-65d13c005756/ritual%20reel%203.m4v?v=1740521588625" autoplay loop muted playsinline disablePictureInPicture preload="auto" controlsList="nodownload nofullscreen noremoteplayback" poster="">
+            </video>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p class="project-title">The Ritual</p>
+                    <div class="categories">
+                        <span class="category">CREATIVE DIRECTION</span>
+                        <span class="category">SET CREATION</span>
+                        <span class="category">SHOOTING ON DIGITAL + FILM</span>
+                        <span class="category">VIDEO EDITING</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="goodnotes.html" id="goodnotes" class="gallery-item small">
+            <img src="https://cdn.glitch.global/4f8ad5f1-9be9-4d42-b78c-65d13c005756/Screenshot%202025-02-25%20at%2010.09.17%20PM.png?v=1740521375055" alt="Goodnotes">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p class="project-title">Goodnotes – Back to School</p>
+                    <div class="categories">
+                        <span class="category">STICKER DESIGN</span>
+                        <span class="category">ILLUSTRATION</span>
+                        <span class="category">BRANDING + MARKETING DESIGN</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="thirstyrobots.html" id="thirstyrobots" class="gallery-item small">
+            <video src="https://cdn.glitch.global/b5b72ff1-8979-4b5e-851a-e04a19049084/ezgif-4ce41d6597f935.mov?v=1740948923575" autoplay loop muted playsinline disablePictureInPicture preload="auto" controlsList="nodownload nofullscreen noremoteplayback" poster="">
+            </video>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p class="project-title">Thirsty Robots</p>
+                    <div class="categories">
+                        <span class="category">CREATIVE CODE</span>
+                        <span class="category">AI CHATBOT CREATION</span>
+                        <span class="category">GAME DESIGN</span>
+                        <span class="category">WEB DESIGN</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+<a id="publication" class="gallery-item small">
+    <img src="https://cdn.glitch.global/ae660dc2-9a03-4c73-be32-ae6f289c8253/Screenshot%202025-03-08%20at%202.35.45%20PM.png?v=1741444629165" alt="Publication">
+    <div class="overlay">
+        <div class="overlay-content">
+            <p class="project-title">Coming Soon...</p>
+            <div class="categories">
+                <span class="category">PUBLICATION DESIGN</span>
+                <span class="category">ZINES + PAMPHLETS</span>
+                <span class="category">MAGAZINE DESIGN</span>
+            </div>
+        </div>
+    </div>
+</a>
+<a id="misc" class="gallery-item small">
+    <img src="https://cdn.glitch.global/ae660dc2-9a03-4c73-be32-ae6f289c8253/Screenshot%202025-03-08%20at%202.36.54%20PM.png?v=1741444632322" alt="Misc">
+    <div class="overlay">
+        <div class="overlay-content">
+            <p class="project-title">Coming Soon...</p>
+            <div class="categories">
+                <span class="category">MISC. PROJECTS</span>
+                <span class="category">WHIMSY</span>
+            </div>
+        </div>
+    </div>
+</a>
+    </div>
+
+    <div class="instructions">
+        try <i>scrolling!</i><br>
+        hover + click on projects to read more.<br>
+        <span class="coded-by">coded with 💙 by anaya maheshwari ✷</span>
+    </div>
+
+    <div class="instructions2">
+        @anayamhw<br>
+        <a href="mailto:anaya.maheshwari@gmail.com?subject=lets chat!">anaya.maheshwari@gmail.com</a><br>
+        <a href="https://linkedin.com/in/anaya-maheshwari" target="_blank">linkedin.com/in/anaya-maheshwari</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cursor.js"></script>
+</body>
+
+</html>
