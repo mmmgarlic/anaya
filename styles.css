@@ -1,3 +1,41 @@
+/* Default positions for super-wide screens (1920px and above) */
+#wayfarer {
+    right: 50vw;
+    top: 8vh;
+}
+#caveclock {
+    right: 35vw;
+    top: 43vh;
+}
+#onthegroove {
+    right: 28vw;
+    top: 12vh;
+}
+#sharpcheddar {
+    left: 5vw;
+    top: 28vh;
+}
+#theritual {
+    right: 18vw;
+    top: 35vh;
+}
+#goodnotes {
+    left: 21vw;
+    bottom: 33vh;
+}
+#thirstyrobots {
+    left: 33vw;
+    bottom: 8vh;
+}
+#publication {
+    left: 3vw;
+    bottom: 15vh;
+}
+#misc {
+    right: 8vw;
+    top: 5vh;
+}
+
 @font-face {
     font-family: 'SF Pro Display';
     src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Regular.otf?v=1739296560122') format('opentype');
