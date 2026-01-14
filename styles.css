@@ -36,6 +36,11 @@
     top: 5vh;
 }
 
+/* disables clicking */
+.gallery-item.disabled {
+  pointer-events: none;
+}
+
 @font-face {
     font-family: 'SF Pro Display';
     src: url('https://cdn.glitch.global/69f8f06e-65ba-408a-8b25-1c397c7a86db/SF-Pro-Display-Regular.otf?v=1739296560122') format('opentype');
